@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-
+from typing import Dict, List
 QueryType = dict[str, bool | str | list[list[str]] | dict[str, str | bool]]
 
 
@@ -25,7 +25,7 @@ class Instance:
     disk_bw: float | None = None
     disk_name: str | None = None
     disk_space: float | None = None
-    disk_util: int | None = None
+    disk_util: float | None = None
     dlperf: float | None = None
     dlperf_per_dphtotal: float | None = None
     dph_base: float | None = None
@@ -52,10 +52,10 @@ class Instance:
     image_runtype: str | None = None
     image_uuid: str | None = None
     inet_down: float | None = None
-    inet_down_billed: bool | None = None
+    inet_down_billed: float | None = None
     inet_down_cost: float | None = None
     inet_up: float | None = None
-    inet_up_billed: bool | None = None
+    inet_up_billed: float | None = None
     inet_up_cost: float | None = None
     intended_status: str | None = None
     is_bid: bool | None = None
@@ -73,7 +73,7 @@ class Instance:
     num_gpus: int | None = None
     pci_gen: float | None = None
     pcie_bw: float | None = None
-    ports: list[int] | None = None
+    ports: Optional[Dict[str, List[Dict[str, str]]]] = None
     public_ipaddr: str | None = None
     reliability2: float | None = None
     rentable: bool | None = None
