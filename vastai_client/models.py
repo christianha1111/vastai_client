@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Dict, List
+from typing import Dict, List, Optional
 QueryType = dict[str, bool | str | list[list[str]] | dict[str, str | bool]]
 
 
