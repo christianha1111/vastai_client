@@ -259,6 +259,7 @@ class VastClient:
         r = requests.get(url, timeout=10)
         r.raise_for_status()
         rows = r.json()['offers']
+        print (r.json())
         return [from_dict(data_class=Machine, data=row) for row in rows]
 
     def get_instances(self) -> list[Instance]:
@@ -267,7 +268,6 @@ class VastClient:
         r = requests.get(req_url, timeout=10)
         r.raise_for_status()
         rows = r.json()['instances']
-        print (r.json())
         return [from_dict(data_class=Instance, data=row) for row in rows]
 
     def ssh_url(self, instance_id: int) -> str | None:
