@@ -32,7 +32,7 @@ class Instance:
     dph_total: float | None = None
     driver_version: str | None = None
     duration: float | None = None
-    end_date: str | None = None
+    end_date: float | None = None
     external: bool | None = None
     flops_per_dphtotal: float | None = None
     geolocation: str | None = None
