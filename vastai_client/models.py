@@ -34,6 +34,7 @@ class Instance:
     duration: float | None = None
     end_date: float | None = None
     external: bool | None = None
+    extra_env: List[List[str]] = None
     flops_per_dphtotal: float | None = None
     geolocation: str | None = None
     gpu_display_active: bool | None = None
@@ -46,6 +47,7 @@ class Instance:
     gpu_util: float | None = None
     has_avx: int | None = None
     host_id: int | None = None
+    host_run_time: float | None = None
     hosting_type: int | None = None
     id: int | None = None
     image_args: list[str] | None = None
