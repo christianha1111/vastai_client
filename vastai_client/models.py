@@ -76,7 +76,7 @@ class Instance:
     pcie_bw: Optional[float] = None
     ports: Optional[Dict[str, List[Dict[str, str]]]] = None
     public_ipaddr: Optional[str] = None
-    reliability2: Optional[float] = None
+    reliability: Optional[float] = None
     rentable: Optional[bool] = None
     score: Optional[float] = None
     ssh_host: Optional[str] = None
@@ -113,7 +113,7 @@ class Machine:
     geolocation: Optional[str] = None
     flops_per_dphtotal: Optional[float] = None
     dlperf_per_dphtotal: Optional[float] = None
-    reliability2: Optional[float] = None
+    reliability: Optional[float] = None
     host_run_time: Optional[float] = None
     host_id: Optional[int] = None
     id: Optional[int] = None
